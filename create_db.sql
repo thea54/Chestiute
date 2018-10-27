@@ -132,3 +132,23 @@ TABLESPACE pg_default;
 ALTER TABLE public."StudentsPreferences"
     OWNER to postgres;
 
+-- sequences
+CREATE SEQUENCE "CoursesSeq";
+ALTER TABLE "Courses" ALTER COLUMN "id" SET DEFAULT nextval('"CoursesSeq"');
+ALTER TABLE "Courses" ALTER COLUMN "id" SET NOT NULL;
+ALTER SEQUENCE "CoursesSeq" OWNED BY "Courses".id;
+
+CREATE SEQUENCE "LecturerSeq";
+ALTER TABLE "Lecturer" ALTER COLUMN "id" SET DEFAULT nextval('"LecturerSeq"');
+ALTER TABLE "Lecturer" ALTER COLUMN "id" SET NOT NULL;
+ALTER SEQUENCE "LecturerSeq" OWNED BY "Lecturer".id;
+
+CREATE SEQUENCE "PackagesSeq";
+ALTER TABLE "Packages" ALTER COLUMN "id" SET DEFAULT nextval('"PackagesSeq"');
+ALTER TABLE "Packages" ALTER COLUMN "id" SET NOT NULL;
+ALTER SEQUENCE "PackagesSeq" OWNED BY "Packages".id;
+
+CREATE SEQUENCE "StudentsSeq";
+ALTER TABLE "Students" ALTER COLUMN "id" SET DEFAULT nextval('"StudentsSeq"');
+ALTER TABLE "Students" ALTER COLUMN "id" SET NOT NULL;
+ALTER SEQUENCE "StudentsSeq" OWNED BY "Students".id;
