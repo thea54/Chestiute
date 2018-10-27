@@ -12,10 +12,11 @@ import java.util.List;
  * @author Asus
  */
 public class Package {
+    private Integer id;
     private String name;
     private String year;
     private String semester;
-    private List<String> courses;
+    private List<Course> courses;
 
 
     /**
@@ -63,19 +64,33 @@ public class Package {
     /**
      * @return the courses
      */
-    public List<String> getCourses() {
+    public List<Course> getCourses() {
         return courses;
     }
 
     /**
      * @param courses the courses to set
      */
-    public void setCourses(List<String> courses) {
+    public void setCourses(List<Course> courses) {
         this.courses = courses;
     }
     
-    public void addCourse(String course) {
+    public void addCourse(Course course) {
         this.courses.add(course);
+    }
+
+    /**
+     * @return the id
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(Integer id) {
+        this.id = id;
     }
     
 }
