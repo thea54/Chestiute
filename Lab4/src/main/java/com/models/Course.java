@@ -10,11 +10,13 @@ package com.models;
  * @author Asus
  */
 public class Course {
+    private Integer id;
     private String name;
     private String year;
     private String semester;
-    private String lecturer;
+    private Lecturer lecturer;
     private Integer maxStudents;
+    private Package packageObj;
     
     public String getName() {
         return name;
@@ -28,7 +30,7 @@ public class Course {
         return semester;
     }
     
-    public String getLecturer() {
+    public Lecturer getLecturer() {
         return lecturer;
     }
     
@@ -48,12 +50,40 @@ public class Course {
         this.semester = semester;
     }
     
-    public void setLecturer(String lecturer) {
+    public void setLecturer(Lecturer lecturer) {
         this.lecturer = lecturer;
     }
     
-    public void setMaxStudentsr(Integer maxStudents) {
+    public void setMaxStudents(Integer maxStudents) {
         this.maxStudents = maxStudents;
+    }
+
+    /**
+     * @return the id
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    /**
+     * @return the packageObj
+     */
+    public Package getPackageObj() {
+        return packageObj;
+    }
+
+    /**
+     * @param packageObj the packageObj to set
+     */
+    public void setPackageObj(Package packageObj) {
+        this.packageObj = packageObj;
     }
     
             

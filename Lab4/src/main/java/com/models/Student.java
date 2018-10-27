@@ -12,10 +12,11 @@ import java.util.List;
  * @author Asus
  */
 public class Student {
+    private Integer id;
     private String name;
     private String email;
-    private List<String> preferences;
-    private List<String> courses;
+    private List<Course> preferences;
+    private List<Course> courses;
     
     public String getName() {
         return name;
@@ -38,29 +39,43 @@ public class Student {
     /**
      * @return the preferences
      */
-    public List<String> getPreferences() {
+    public List<Course> getPreferences() {
         return preferences;
     }
 
     /**
      * @param preferences the preferences to set
      */
-    public void setPreferences(List<String> preferences) {
+    public void setPreferences(List<Course> preferences) {
         this.preferences = preferences;
     }
 
     /**
      * @return the courses
      */
-    public List<String> getCourses() {
+    public List<Course> getCourses() {
         return courses;
     }
 
     /**
      * @param courses the courses to set
      */
-    public void setCourses(List<String> courses) {
+    public void setCourses(List<Course> courses) {
         this.courses = courses;
+    }
+
+    /**
+     * @return the id
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(Integer id) {
+        this.id = id;
     }
     
     

@@ -10,8 +10,9 @@ package com.models;
  * @author Asus
  */
 public class Lecturer {
+    private Integer id;
     private String name;
-    private String course;
+    private Course course;
 
     /**
      * @return the name
@@ -30,15 +31,29 @@ public class Lecturer {
     /**
      * @return the course
      */
-    public String getCourse() {
+    public Course getCourse() {
         return course;
     }
 
     /**
      * @param course the course to set
      */
-    public void setCourse(String course) {
+    public void setCourse(Course course) {
         this.course = course;
+    }
+
+    /**
+     * @return the id
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(Integer id) {
+        this.id = id;
     }
     
 }
